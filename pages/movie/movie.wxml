@@ -1,0 +1,42 @@
+<view class="stv-container">
+  <view class="tab-bar">
+    <view wx:for="{{tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+  </view>
+  <view class="scroll-view">
+    <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+      <view style="width: {{stv.windowWidth}}px;" class="one-scene">
+        <scroll-view style="height:100%" scroll-y>
+          <view class="new_movies">
+            <block wx:for="{{new_movies}}" wx:key="item">
+              <view class="new_movies_item" bindtap="onNewMovieTap" data-item="{{item}}">
+                <image class="new_movies_item_image" style="width:110px;height:110px" src="{{item.poster}}"></image>
+                <view class="new_movies_item_detail">
+                  <text class="new_movies_item_title">{{item.title}}</text>
+                  <text class="new_movies_item_rating">评分：{{item.rating}}</text>
+                  <text class="new_movies_item_directors">导演：{{item.directors}}</text>
+                  <text class="new_movies_item_actors">主演：{{item.actors}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+      <view style="width: {{stv.windowWidth}}px;" class="one-scene">
+        <scroll-view style="height:100%" scroll-y>
+          <view class="weui-grids">
+            <block wx:for="{{rank_movies}}" wx:key="*this">
+              <view bindtap="onNewMovieTap" class="weui-grid" data-item="{{item}}" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{item.poster}}" />
+                <view class="weui-grid__label">{{item.title}}</view>
+                <view class="weui-grid__rating">评分：{{item.rating}}</view>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="md_container">
+  <text class="md_title">影片：{{md_title}}</text>
+  <image src="{{md_img}}" style="width:100%;height:200px;"></image>
+  <view class="md_text_container">
+    <view class="rating_container">
+      <text class="rating_score">评分：{{md_rating_score}}</text>
+      <text class="rating_count">参评人数：{{md_rating_count}}</text>
+    </view>
+    <text class="rating">类型：{{md_genres}}</text>
+    <text class="rating">时长：{{md_runtime}}</text>
+    <text class="rating">语言：{{md_language}}</text>
+    <text class="rating">上映日期：{{md_release_date}}</text>
+    <text class="rating">制作国家/地区：{{md_country}}</text>
+    <text class="rating">编剧：{{md_writers}}</text>
+    <text class="rating">导演：{{md_directors}}</text>
+    <text class="rating">主演：{{md_actors}}</text>
+    <text class="rating">简介：{{md_plot_simple=="null"?"暂无":md_plot_simple}}</text>
+  </view>
+</view>

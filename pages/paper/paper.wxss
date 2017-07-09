@@ -1,0 +1,118 @@
+.paper_container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.scroll_panel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e7eaef;
+}
+.paper-item {
+  background-color: lightblue;
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.paper-text {
+  margin-left: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.paper-title {
+  flex: 1;
+  height: 40px;
+  display: block;
+  font-size: 26rpx;
+  color: black;
+}
+
+.paper-extra {
+  display: flex;
+  flex-direction: row;
+  font-size: 22rpx;
+  color: gray;
+}
+
+.paper-author {
+  flex: 1;
+}
+
+.paper-date {
+  margin-right: 10px;
+  width: 210rpx;
+  margin-left: 50px;
+}
+
+.sp_item_type2 {
+  padding: 5px;
+  width: 100%;
+}
+.sp_item_type1 {
+  padding: 5px;
+  width: 100%;
+   display: flex;
+  flex-direction: row;
+}
+.sp_item_content{
+  width: 65%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sp_title {
+  margin-right: 3px;
+  flex: 1;
+  display: inline-block;
+  font-size: 26rpx;
+  line-height: 20px;
+}
+.sport-extra{
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  font-size: 22rpx;
+  color: gray;
+}
+.sp_image1{
+  width: 32%;
+  height: 130px;
+  margin-right: 5px;
+}
+.imgItemType1{
+  align-items: flex-end;
+  width: 100%;
+  height: 130px;
+}
+
+.sport-author {
+  flex: 1;
+}
+
+.sport-date {
+  width: 95px;
+  margin-left: 30rpx;
+}
+
+
+.sp_image2 {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  margin-bottom: 3px;
+  flex-direction: row;
+}
+
+.imgItem {
+  width: 32%;
+  margin-left: 3px;
+  height: 100%;
+}

@@ -1,0 +1,77 @@
+<view class="paper_container">
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class="paper-lists">
+          <scroll-view scroll-y >
+            <block wx:for="{{papers}}" wx:key="item">
+              <view bindtap="onPapersItemTap" class="paper-item" data-item="{{item}}">
+                <image style="width:60px;height:60px;" mode="scaleToFill" src="{{item.thumbnail_pic_s}}" class="paper-item-img"></image>
+                <view class="paper-text">
+                  <text class="paper-title">{{item.title}}</text>
+                  <view class="paper-extra">
+                    <text class="paper-author">{{item.author_name}}</text>
+                    <text class="paper-date">{{item.date}}</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class="weui-grids">
+          <scroll-view scroll-y>
+            <block wx:for="{{grids}}" wx:key="*this">
+              <view bindtap="onPapersItemTap" class="weui-grid" data-item="{{item}}" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{item.thumbnail_pic_s}}" />
+                <view class="weui-grid__label">{{item.title}}</view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class="sport">
+          <scroll-view scroll-y>
+            <block wx:for="{{sports}}" wx:key="item">
+              <view class="sp_item_type1" bindtap="onPapersItemTap" data-item="{{item}}" hidden="{{item.thumbnail_pic_s03 != null}}">
+                <view class="sp_item_content">
+                  <text class="sp_title">{{item.title}}</text>
+                  <view class="paper-extra">
+                    <text class="paper-author">{{item.author_name}}</text>
+                    <text class="paper-date">{{item.date}}</text>
+                  </view>
+                </view>
+                <view class="sp_image1">
+                  <image class="imgItemType1" src="{{item.thumbnail_pic_s}}"></image>
+                </view>
+              </view>
+              <view class="sp_item_type2" bindtap="onPapersItemTap" data-item="{{item}}" hidden="{{item.thumbnail_pic_s03 == null}}">
+                <text class="sp_title ">{{item.title}}</text>
+                <view class="sp_image2 ">
+                  <image class="imgItem" src="{{item.thumbnail_pic_s}}"></image>
+                  <image class="imgItem" src="{{item.thumbnail_pic_s02}}"></image>
+                  <image class="imgItem" src="{{item.thumbnail_pic_s03}}"></image>
+                </view>
+                <view class="paper-extra ">
+                  <text class="paper-author ">{{item.author_name}}</text>
+                  <text class="paper-date">{{item.date}}</text>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

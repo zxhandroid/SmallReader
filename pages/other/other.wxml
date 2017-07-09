@@ -1,0 +1,20 @@
+<view class="other_container">
+  <view class="picker">
+    <picker class="weui-btn" mode="date" value="{{date}}" start="2015-08-06" end="2017-09-01" bindchange="bindDateChange">
+      <button class="data_button" type="default">按日期检索</button>
+    </picker>
+  </view>
+  <view class="other_list">
+    <block wx:for="{{otherLists}}" wx:key="item">
+      <scroll-view scroll-y>
+        <view class="itemType1">
+          <text class="title">{{item.desc}}</text>
+          <view class="extra">
+            <text class="author">{{item.who}}</text>
+            <text class="date">{{item.publishedAt}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="top_title">
+    <text>{{topTitle}}</text>
+  </view>
+  <view class="top_extra">
+    <text class="top_author">来源：{{topAuthor}}</text>
+    <text class="top_date">时间：{{topDate}}</text>
+  </view>
+  <view class="image_container">
+    <image style="width: 100%; height: 200px;" src="{{imageUrl}}" hidden="{{hiddenImg}}"></image>
+    <swiper class="image_swiper" hidden="{{hiddenSwiper}}" autoplay="{{autoplay}}" indicator-dots="{{indicatordots}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="item">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" style="width: 100%; height: 200px;"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="content_mark">
+    <text>详细报道：</text>
+  </view>
+  <view class="content">
+    <text>{{content}}</text>
+  </view>
+
+</view>

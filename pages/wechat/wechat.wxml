@@ -1,0 +1,23 @@
+<view class="wechat_container">
+  <block wx:for="{{wechat_list}}" wx:key="item">
+    <view class="wechat">
+      <view class="wechat_text">
+        <text class="title">{{item.title}}</text>
+        <view class="wechat_bottom">
+          <text class="decription">{{item.description}}</text>
+          <text class="ctime">{{item.ctime}}</text>
+        </view>
+      </view>
+      <image style="width:90px;height:90px;" src="{{item.picUrl}}"></image>
+    </view>
+  </block>
+  <view class="load_more">
+    <view class="weui-loadmore" hidden="{{loading_more}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" hidden="{{no_data}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
+  </view>
+</view>

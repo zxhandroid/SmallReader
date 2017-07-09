@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/paper/paper",
+    "pages/movie/movie",
+    "pages/wechat/wechat",
+    "pages/other/other",
+    "pages/paper_details/paper_details",
+    "pages/movie_details/movie_details",
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundColor": "#ADD8E6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#6CC2AA",
+    "navigationBarTextStyle":"black"
+  },
+   "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#69C4AA",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/paper/paper",
+      "text": "日报",
+      "iconPath": "image/paper-normal.png",
+      "selectedIconPath": "image/paper-press.png"
+    },
+    {
+      "pagePath": "pages/movie/movie",
+      "text": "电影",
+      "iconPath": "image/movie-normal.png",
+      "selectedIconPath": "image/movie-press.png"
+    },
+    {
+      "pagePath": "pages/wechat/wechat",
+      "text": "微信",
+      "iconPath": "image/wechat-normal.png",
+      "selectedIconPath": "image/wechat-press.png"
+    },
+    {
+      "pagePath": "pages/other/other",
+      "text": "其他",
+      "iconPath": "image/other-normal.png",
+      "selectedIconPath": "image/other-press.png"
+    }
+    ]
+  }
+}

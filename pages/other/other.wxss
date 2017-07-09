@@ -1,0 +1,44 @@
+.other_container{
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}
+.picker{
+  position: fixed;
+  width: 100%;
+  height: 50px;
+   z-index: 1;
+}
+.weui-btn{
+  margin-top: 10px;
+  width: 100%;
+}
+.data_button{
+  font-size: 28rpx;
+}
+.other_list{
+  margin-top: 35px;
+}
+.itemType1{
+  background-color: lightskyblue;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  font-size: 30rpx;
+}
+.extra{
+  margin-top: 8px;
+  font-size: 24rpx;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+}
+.author{
+  flex: 1;
+}
+.date{
+  margin-right: 20px;
+}

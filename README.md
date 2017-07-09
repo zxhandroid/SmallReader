@@ -1,3 +1,5 @@
+![img](https://github.com/zxhandroid/SmallReader/blob/master/sr.gif)
+
 #### 应用主要分为日报，电影，微信和其他四个版块，底部的tab,在小程序的app.json中对tabBar进行配置就好，这个很简单，参考文档就行。下面简单的说下各个版块的实现：
 #### 一、日报
 ##### 日报这个版块，在顶部有三个页签，这里可以利用微信在GitHub上的开源框架weui-wxss中的navbar来实现，地址为：https://github.com/Tencent/weui-wxss,
